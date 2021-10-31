@@ -1,7 +1,7 @@
 # AWS Infrastructure as Code and Notes
 Templates created in CloudFormation to assist with resource creation
 
-## CloudFormation Templates
+## Templates
 
 * Non-portable CloudFormation Template [[Template]](./cloudformation/cfn-nonportable-ec2-s3.yaml)
 * Parameterized and portable CloudFormation Template [[Template]](./cloudformation/cfn-parameterized-ec2-s3.yaml)
