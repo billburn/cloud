@@ -2,4 +2,4 @@
 
 ## Templates
 
-- Create a change set for an EC2 by adding a new security group [URL](/cfn-change-set-add-sg-to-ec2.yaml)
+- Create a change set for an EC2 by adding a new security group [URL](./aws/cloudformation/cfn-change-set-add-sg-to-ec2.yaml)
