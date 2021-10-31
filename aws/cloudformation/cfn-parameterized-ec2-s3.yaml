@@ -1,0 +1,32 @@
+Parameters:
+  KeyName:
+    Description: Name of an existing EC2 KeyPair to enable SSH access to the instance
+    Type: AWS::EC2::KeyPair::KeyName
+  InstanceType:
+    Description: EC2 instance type
+    Type: String
+    Default: 't2.micro'
+    AllowedValues: [t2.micro, t3.micro, t3.small, t3.medium, t3.large]
+  LatestAmiId:
+    Description: AMI for EC2 (default is latest AmaLinux2)
+    Type: 'AWS::SSM::Parameter::Value<AWS::EC2::Image::Id>'
+    Default: '/aws/service/ami-amazon-linux-latest/amzn2-ami-hvm-x86_64-gp2'
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: !Ref 'InstanceType'
+      KeyName: !Ref 'KeyName'
+      ImageId: !Ref 'LatestAmiId'
+Outputs:
+  Region:
+    Value: !Ref AWS::Region
+  InstanceId:
+    Value: !Ref EC2Instance
+  StackId:
+    Value: !Ref AWS::StackId
+  StackName:
+    Value: !Ref AWS::StackName
+  AccountId:
+    Value: !Ref AWS::AccountId
+  

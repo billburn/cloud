@@ -1,0 +1,11 @@
+Resources:
+  Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: 'sysops-admin-nonportable-bucket'
+  Instance:
+    Type: 'AWS::EC2::Instance'
+    Properties: 
+      ImageId: 'ami-02e136e904f3da870'
+      InstanceType: 't2.micro'
+      KeyName: "A4L"
